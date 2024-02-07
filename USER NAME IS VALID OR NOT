@@ -1,0 +1,17 @@
+import java.io*;
+import java.util*;
+public state void main(string args[])
+class uservalid
+scanner sc=new.scanner(syste.in);
+string a=sc.nextline();
+system.out.print\n("enter the username")
+stringb=sc.nextline();
+system.out.print\("reenter the username")
+if {
+    (s.a==s.b)
+}
+{
+    system.out.print("user is valid")
+    else
+}
+system.out.print("user is invalid")
