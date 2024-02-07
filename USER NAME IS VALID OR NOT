@@ -1,17 +1,19 @@
-import java.io*;
-import java.util*;
-public state void main(string args[])
-class uservalid
-scanner sc=new.scanner(syste.in);
-string a=sc.nextline();
-system.out.print\n("enter the username")
-stringb=sc.nextline();
-system.out.print\("reenter the username")
-if {
-    (s.a==s.b)
+import java.util.Scanner;
+
+public class UserValid {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter the username: ");
+        String a = sc.nextLine();
+        
+        System.out.print("Re-enter the username: ");
+        String b = sc.nextLine();
+        
+        if (a.equals(b)) {
+            System.out.println("Username is valid.");
+        } else {
+            System.out.println("Usernames do not match. Please enter the same username twice.");
+        }
+    }
 }
-{
-    system.out.print("user is valid")
-    else
-}
-system.out.print("user is invalid")
