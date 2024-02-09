@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class SimpleInterest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the principal amount: ");
+        double principal = scanner.nextDouble();
+
+        System.out.print("Enter the number of years: ");
+        int years = scanner.nextInt();
+
+        System.out.print("Is the customer a senior citizen (y/n): ");
+        char isSeniorCitizen = scanner.next().charAt(0);
+
+        double rateOfInterest = getRateOfInterest(isSeniorCitizen);
+
+        if (rateOfInterest == -1) {
+            System.out.println("Invalid input for senior citizen. Please enter 'y' or 'n'.");
+        } else {
+            double interest = calculateInterest(principal, years, rateOfInterest);
+            System.out.println("Interest: " + interest);
+        }
+    }
+
+    public static double getRateOfInterest(char isSeniorCitizen) {
+        if (isSeniorCitizen == 'y' || isSeniorCitizen == 'Y') {
+            return 0.12; // Senior citizen interest rate is 12%
+        } else if (isSeniorCitizen == 'n' || isSeniorCitizen == 'N') {
+            return 0.10; // Regular interest rate is 10%
+        } else {
+            return -1; // Invalid input
+        }
+    }
+
+    public static double calculateInterest(double principal, int years, double rateOfInterest) {
+        if (principal <= 0 || years <= 0) {
+            return 0; // Invalid input, return 0 interest
+        }
+        return principal * rateOfInterest * years;
+    }
+}
